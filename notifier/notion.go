@@ -51,7 +51,7 @@ func (n *NotionNotifier) SendAlarm(value float64, status string) error {
 
 	jsonBody, _ := json.Marshal(payload)
 	req, _ := http.NewRequest("PATCH", url, bytes.NewBuffer(jsonBody))
-	req.Header.Set("Authorization", "Bearer "+n.Config.NotionToken)
+	req.Header.Set("Authorization", "Bearer "+n.Config.Token)
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Notion-Version", "2022-06-28")
 

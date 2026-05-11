@@ -8,10 +8,10 @@ import (
 )
 
 type Config struct {
-	NotionToken string
-	PageID      string
-	UserID      string
-	Location    *time.Location
+	Token    string
+	PageID   string
+	UserID   string
+	Location *time.Location
 }
 
 func LoadConfig() *Config {
@@ -20,9 +20,9 @@ func LoadConfig() *Config {
 	loc := time.FixedZone("KST", 9*60*60)
 
 	return &Config{
-		NotionToken: os.Getenv("NOTION_TOKEN"),
-		PageID:      os.Getenv("NOTION_PAGE_ID"),
-		UserID:      os.Getenv("NOTION_USER_ID"),
-		Location:    loc,
+		Token:    os.Getenv("NOTION_TOKEN"),
+		PageID:   os.Getenv("NOTION_PAGE_ID"),
+		UserID:   os.Getenv("NOTION_USER_ID"),
+		Location: loc,
 	}
 }
