@@ -7,7 +7,7 @@ import (
 )
 
 const (
-	ExtremeFearThreshold = 24
+	ExtremeFearThreshold = 25
 )
 
 type IndexResult struct {
