@@ -26,7 +26,7 @@ jobs:
         env:
           # GitHub Secrets를 시스템 환경변수로 주입
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          PAGE_ID: ${{ secrets.PAGE_ID }}
-          USER_ID: ${{ secrets.USER_ID }}
+          NOTION_PAGE_ID: ${{ secrets.NOTION_PAGE_ID }}
+          NOTION_USER_ID: ${{ secrets.NOTION_USER_ID }}
         # 패키지가 분리되어 있으므로 현재 폴더(.)의 모든 파일을 빌드/실행
         run: go run .
